@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=Q, initial-scale=1.0" />
+    <title>Quiz App</title>
+
+    <script src="JS/script.js"></script>
+
+    <!-- font awesome library link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- links to jquery -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="CSS/style.css" />
+
+    <!-- google fonts links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Happy+Monkey:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  </head>
+  <body onload="checkCookie(); showAvatar()">
+    <!-- <div class="pageContainer">-->
+
+    <div class="choiceContainer">
+      <div class="slider maths">
+        <div class="magic-hover magic-hover__square logOff">
+          <button class="magic-hover magic-hover__square logOut">
+            <a href="index.html">Log Out</a>
+          </button>
+          <div class="icons">
+            <img src="icons/owl.svg" alt="" class="owlProfile" />
+            <img src="icons/frog.svg" alt="" class="frogProfile" />
+            <img src="icons/monkey.svg" alt="" class="monkeyProfile" />
+            <img src="icons/duck.svg" alt="" class="duckProfile" />
+          </div>
+        </div>
+        <a onclick="mathSelect()" href="quiz_page.html">
+          <div class="subject subjectMaths">
+            <i class="fa-solid fa-calculator icons"></i> <h3 class="mediaHeading">Maths</h3>
+          </div>
+
+          <div class="subjectDetail subjectDetailMaths">
+            <h3 class="mathQ">Maths</h3>
+            <p>
+              Test your mathematical knowledge with five number based questions.
+            </p>
+          </div>
+        </a>
+      </div>
+
+      <div class="slider english">
+        <a onclick="englishSelect()" href="quiz_page.html">
+          <div class="subject subjectEnglish">
+            <i class="fa-solid fa-book-open-reader icons"></i><h3 class="mediaHeading">English</h3>
+          </div>
+          <div class="subjectDetail subjectDetailEnglish">
+            <h3 class="englishQ">English</h3>
+            <p>
+             Test your spelling and grammar with these English questions.
+            </p>
+          </div>
+        </a>
+      </div>
+
+      <div class="slider health">
+        <a onclick="healthSelect()" href="quiz_page.html">
+          <div class="subject subjectHealth">
+            <i class="fa-solid fa-heart-pulse icons"></i><h3 class="mediaHeading">Health</h3>
+          </div>
+          <div class="subjectDetail subjectDetailHealth">
+            <h3 class="healthQ">Health</h3>
+            <p>
+              Challenge yoruself with these questions on health and wellbeing.
+            </p>
+          </div>
+        </a>
+      </div>
+
+      <div class="slider history">
+        <a onclick="historySelect()" href="quiz_page.html">
+          <div class="subject subjectHistory">
+            <i class="fa-brands fa-fort-awesome icons"></i><h3 class="mediaHeading">History</h3>
+          </div>
+          <div class="subjectDetail subjectDetailHistory">
+            <h3 class="historyQ">History</h3>
+            <p>
+              Think you know about Scottish history? Give these a go! 
+            </p>
+          </div>
+        </a>
+      </div>
+
+      <div class="slider social">
+        <a onclick="socialSelect()" href="quiz_page.html">
+          <div class="subject subjectSocial">
+            <i class="fa-solid fa-handshake icons"></i><h3 class="mediaHeading">Social</h3>
+          </div>
+          <div class="subjectDetail subjectDetailSocial">
+            <h3 class="socialQ">Social</h3>
+            <p>
+              Try these five questions based on emotions and understanding of others.
+            </p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="scrollContainer">
+      <div class="scrollText" id="display"></div>
+    </div>
+    <!-- this is the JS library script for Magic Mouse affects  -->
+
+    <script
+      type="text/javascript"
+      src="https://res.cloudinary.com/veseylab/raw/upload/v1636192990/magicmouse/magic_mouse-1.2.1.cdn.min.js"
+    ></script>
+    <script type="text/javascript">
+      options = {
+        cursorOuter: "circle",
+        hoverEffect: "circle-move",
+        hoverItemMove: false,
+        defaultCursor: false,
+        outerWidth: 40,
+        outerHeight: 40,
+      };
+      magicMouse(options);
+    </script>
+  </body>
+</html>

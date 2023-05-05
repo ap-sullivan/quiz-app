@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=Q, initial-scale=1.0" />
+    <title>Questions</title>
+    
+
+    <script src="JS/script.js"></script>
+    <link rel="stylesheet" href="CSS/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&display=swap" rel="stylesheet">
+<link
+      href="https://fonts.googleapis.com/css2?family=Happy+Monkey:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    
+   
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+  </head>
+  <body class="quizPageBody" id="quizBody" onload="loadQuestionsAndAnswers(); showAvatar(); displayTime(); displayDate()">
+    
+    <div class="pageContainer">
+      <div class="timeAndDate">
+        <div id="date"></div>
+        <div id="time"></div>
+      </div>
+      <h2 id="welcome"></h2>
+
+      <div class="magic-hover magic-hover__square iconGroup">
+        <button class="magic-hover magic-hover__square logOut">
+          <a href="quiz_choice.html">Back</a>
+        </button>
+        <div class="icons">
+          <img src="icons/owl.svg" alt="" class="owlProfile" />
+          <img src="icons/frog.svg" alt="" class="frogProfile" />
+          <img src="icons/monkey.svg" alt="" class="monkeyProfile" />
+          <img src="icons/duck.svg" alt="" class="duckProfile" />
+        </div>
+      </div>
+
+   
+      <h1 id="quizHeader">QUIZ SUBJECT</h1>
+
+
+      <div id="question0" class="questionsContainer">
+        <label id="q0" class="question"></label>
+        <div class="topRow">
+          <label class="radioButton">
+            <input type="radio" name="q0" value="A" /><span id="q0a"class="magic-hover magic-hover__square"></span>
+          </label>
+          <label class="radioButton">
+            <input type="radio" name="q0" value="B" /><span id="q0b" class="magic-hover magic-hover__square"></span>
+          </label>
+        </div>
+        <div class="bottomRow">
+          <label class="radioButton">
+            <input type="radio" name="q0" value="C" /><span id="q0c" class="magic-hover magic-hover__square"></span>
+          </label>
+          <label class="radioButton">
+            <input type="radio" name="q0" value="D" /><span id="q0d" class="magic-hover magic-hover__square"></span>
+          </label>
+        </div>
+        
+        <label id="q0feedback" class="questionFeedback"></label>
+      </div>
+
+      <div id="question1" class="questionsContainer">
+        <label id="q1" class="question"></label>
+        <div class="topRow">
+          <label class="radioButton">
+            <input type="radio" name="q1" value="A" /><span id="q1a"class="magic-hover magic-hover__square"></span>
+          </label>
+          <label class="radioButton">
+            <input type="radio" name="q1" value="B" /><span id="q1b" class="magic-hover magic-hover__square"></span>
+          </label>
+        </div>
+        <div class="bottomRow">
+          <label class="radioButton">
+            <input type="radio" name="q1" value="C" /><span id="q1c" class="magic-hover magic-hover__square"></span>
+          </label>
+          <label class="radioButton">
+            <input type="radio" name="q1" value="D" /><span id="q1d" class="magic-hover magic-hover__square"></span>
+          </label>
+        </div>
+        <label id="q1feedback" class="questionFeedback"></label>
+      </div>
+
+      <div id="question2" class="questionsContainer">
+        <label id="q2" class="question"></label>
+        <div class="topRow">
+          <label class="radioButton">
+            <input type="radio" name="q2" value="A" /><span id="q2a"class="magic-hover magic-hover__square"></span>
+          </label>
+          <label class="radioButton">
+            <input type="radio" name="q2" value="B" /><span id="q2b" class="magic-hover magic-hover__square"></span>
+          </label>
+        </div>
+        <div class="bottomRow">
+          <label class="radioButton">
+            <input type="radio" name="q2" value="C" /><span id="q2c" class="magic-hover magic-hover__square"></span>
+          </label>
+          <label class="radioButton">
+            <input type="radio" name="q2" value="D" /><span id="q2d" class="magic-hover magic-hover__square"></span>
+          </label>
+        </div>
+        <label id="q2feedback" class="questionFeedback"></label>
+      </div>
+
+      <div id="question3" class="questionsContainer">
+        <label id="q3" class="question"></label>
+        <div class="topRow">
+          <label class="radioButton">
+            <input type="radio" name="q3" value="A" /><span id="q3a"class="magic-hover magic-hover__square"></span>
+          </label>
+          <label class="radioButton">
+            <input type="radio" name="q3" value="B" /><span id="q3b" class="magic-hover magic-hover__square"></span>
+          </label>
+        </div>
+        <div class="bottomRow">
+          <label class="radioButton">
+            <input type="radio" name="q3" value="C" /><span id="q3c" class="magic-hover magic-hover__square"></span>
+          </label>
+          <label class="radioButton">
+            <input type="radio" name="q3" value="D" /><span id="q3d" class="magic-hover magic-hover__square"></span>
+          </label>
+        </div>
+        <label id="q3feedback" class="questionFeedback"></label>
+      </div>
+
+      
+      <div id="question4" class="questionsContainer">
+        <label id="q4" class="question"></label>
+        <div class="topRow">
+          <label class="radioButton">
+            <input type="radio" name="q4" value="A" /><span id="q4a"class="magic-hover magic-hover__square"></span>
+          </label>
+          <label class="radioButton">
+            <input type="radio" name="q4" value="B" /><span id="q4b" class="magic-hover magic-hover__square"></span>
+          </label>
+        </div>
+        <div class="bottomRow">
+          <label class="radioButton">
+            <input type="radio" name="q4" value="C" /><span id="q4c" class="magic-hover magic-hover__square"></span>
+          </label>
+          <label class="radioButton">
+            <input type="radio" name="q4" value="D" /><span id="q4d" class="magic-hover magic-hover__square"></span>
+          </label>
+        </div>
+        <label id="q4feedback" class="questionFeedback"></label>
+      </div>
+      
+      <button onclick="checkAnswers()"class="magic-hover magic-hover__square submit">SUBMIT</button>
+      <div id="feedback"></div>
+      
+<div class="navButtons">
+      
+      <button onclick="clearAnswers()" class="magic-hover magic-hover__square"><a href="#top">TRY AGAIN</a></button>
+      <button onclick="clearAnswers()" class="magic-hover magic-hover__square"><a href="./quiz_choice.html">NEW QUIZ</a></button>
+    </div>
+
+    <button id="certificate" onclick="clearAnswers()" class="magic-hover magic-hover__square"><a href="certificate.html">VIEW CERTIFICATE</a></button>
+      <script
+      type="text/javascript"
+      src="https://res.cloudinary.com/veseylab/raw/upload/v1636192990/magicmouse/magic_mouse-1.2.1.cdn.min.js"
+    ></script>
+    <script type="text/javascript">
+      options = {
+        cursorOuter: "circle",
+        hoverEffect: "circle-move",
+        hoverItemMove: false,
+        defaultCursor: false,
+        outerWidth: 40,
+        outerHeight: 40,
+      };
+      magicMouse(options);
+    </script>
+
+  </body>
+</html>

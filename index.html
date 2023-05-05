@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=Q, initial-scale=1.0" />
+    <title>Quiz App</title>
+
+    <script src="JS/script.js"></script>
+
+    <!-- sweet alert link -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- font awesome library link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="CSS/style.css" />
+
+    <!-- google fonts links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Happy+Monkey:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  </head>
+  <body onload="clearInput(); displayTime(); displayDate()">
+    <div class="pageContainer">
+      <div class="timeAndDate">
+        <div id="date"></div>
+        <div id="time"></div>
+      </div>
+      <div class="loginContainer">
+        <h1>Junior-Versity <span>Challenge</span></h1>
+        <div class="bulletWrap">
+          <div class="bullet greenCircle"></div>
+
+          <input
+            id="name"
+            type="text"
+            placeholder="ENTER YOUR NAME"
+            class="magic-hover magic-hover__square"
+          /><i class="fa-solid fa-pencil pencil"></i>
+        </div>
+        <div class="bulletWrap">
+          <div class="bullet orangeCircle"></div>
+
+          <input
+            required
+            id="email"
+            type="email"
+            placeholder="ENTER EMAIL"
+            class="magic-hover magic-hover__square"
+          /><i class="fa-solid fa-pencil pencil"></i>
+        </div>
+        <div class="bulletWrap">
+          <div class="bullet blueCircle"></div>
+          <input
+            id="age"
+            type="number"
+            placeholder="ENTER YOUR AGE"
+            class="magic-hover magic-hover__square"
+          /><i class="fa-solid fa-pencil pencil"></i>
+        </div>
+        <h3>CHOOSE AN AVATAR</h3>
+        <div class="avatarWrap">
+          <label class="avatar">
+            <input type="radio" name="avatar" value="duck" id="duck" />
+            <img class="avatarSVG" src="icons/duck.svg" alt="duck avatar" />
+          </label>
+          <label class="avatar">
+            <input type="radio" name="avatar" value="frog" id="frog" />
+            <img class="avatarSVG" src="icons/frog.svg" alt="frog avatar" />
+          </label>
+          <label class="avatar">
+            <input type="radio" name="avatar" value="monkey" id="monkey" />
+            <img class="avatarSVG" src="icons/monkey.svg" alt="monkey avatar" />
+          </label>
+          <label class="avatar">
+            <input type="radio" name="avatar" value="owl" id="owl" />
+            <img class="avatarSVG" src="icons/owl.svg" alt="owl avatar" />
+          </label>
+        </div>
+        <button
+          onclick="loginCheck()"
+          class="magic-hover magic-hover__square loginButton"
+        >
+          <a> SUBMIT </a>
+        </button>
+      </div>
+      <label id="loginFeedback"></label>
+      
+    </div>
+
+    <!-- this is the JS library script for Magic Mouse affects  -->
+
+    <script
+      type="text/javascript"
+      src="https://res.cloudinary.com/veseylab/raw/upload/v1636192990/magicmouse/magic_mouse-1.2.1.cdn.min.js"
+    ></script>
+    <script type="text/javascript">
+      options = {
+        cursorOuter: "circle",
+        hoverEffect: "circle-move",
+        hoverItemMove: false,
+        defaultCursor: false,
+        outerWidth: 40,
+        outerHeight: 40,
+      };
+      magicMouse(options);
+    </script>
+  </body>
+</html>

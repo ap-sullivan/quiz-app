@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=Q, initial-scale=1.0" />
+    <title>Certificate</title>
+
+    <script src="JS/script.js"></script>
+
+    <!-- sweet alert link -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- font awesome library link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="CSS/style.css" />
+
+    <!-- google fonts links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Happy+Monkey:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  </head>
+  <body class="bodyCertificate" onload="formatCertificate();">
+    <div class="certNavButtons">
+      <button onclick="window.print();return false;" class="magic-hover magic-hover__square">PRINT</button>
+      <button onclick="history.back()" class="magic-hover magic-hover__square">BACK</button>
+      <button><a href="./quiz_choice.html" class="magic-hover magic-hover__square">NEW QUIZ</a></button>
+    </div>
+    <div class="container certificateContainer">
+      <div id="printarea">
+        <div id="innerBorder">
+          <h1 class="certHeader">You're a Star</h1>
+          <img class="star" src="./icons/shooting-star.svg" alt="" />
+          <h2 class="certify">This is to certify that</h2>
+          <div id="certName"><p id="userName">NAME HERE</p></div>
+          <h2 class="completed" id="subject">QUIZ NAME HERE</h2>
+
+          <img class="trophy" src="/icons/trophy.svg" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <!-- this is the JS library script for Magic Mouse affects  -->
+
+    <script
+      type="text/javascript"
+      src="https://res.cloudinary.com/veseylab/raw/upload/v1636192990/magicmouse/magic_mouse-1.2.1.cdn.min.js"
+    ></script>
+    <script type="text/javascript">
+      options = {
+        cursorOuter: "circle",
+        hoverEffect: "circle-move",
+        hoverItemMove: false,
+        defaultCursor: false,
+        outerWidth: 40,
+        outerHeight: 40,
+      };
+      magicMouse(options);
+    </script>
+  </body>
+</html>
